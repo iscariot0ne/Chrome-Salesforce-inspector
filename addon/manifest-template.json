@@ -15,7 +15,7 @@
   "permissions": [
     "https://*.salesforce.com/*",
     "https://*.force.com/*",
-    "https://*.cloudforce.com/*",
+    "https://*.crmforce.mil/*",
     "https://*.visualforce.com/*",
     "cookies"
   ],
@@ -25,7 +25,7 @@
         "https://*.salesforce.com/*",
         "https://*.visual.force.com/*",
         "https://*.lightning.force.com/*",
-        "https://*.cloudforce.com/*",
+        "https://*.crmforce.mil/*",
         "https://*.visualforce.com/*"
       ],
       "all_frames": true,

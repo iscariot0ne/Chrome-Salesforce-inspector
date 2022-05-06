@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     // The first part of the session cookie is the OrgID,
     // which we use as key to support being logged in to multiple orgs at once.
     // http://salesforce.stackexchange.com/questions/23277/different-session-ids-in-different-contexts
-    // There is no straight forward way to unambiguously understand if the user authenticated against salesforce.com or cloudforce.com
+    // There is no straight forward way to unambiguously understand if the user authenticated against salesforce.com or crmforce.mil
     // (and thereby the domain of the relevant cookie) cookie domains are therefore tried in sequence.
     chrome.cookies.get({url: request.url, name: "sid", storeId: sender.tab.cookieStoreId}, cookie => {
       if (!cookie) {
