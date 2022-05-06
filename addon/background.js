@@ -22,7 +22,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         if (sessionCookie) {
           sendResponse(sessionCookie.domain);
         } else {
-          chrome.cookies.getAll({name: "sid", domain: "cloudforce.com", secure: true, storeId: sender.tab.cookieStoreId}, cookies => {
+          chrome.cookies.getAll({name: "sid", domain: "crmforce.mil", secure: true, storeId: sender.tab.cookieStoreId}, cookies => {
             sessionCookie = cookies.find(c => c.value.startsWith(orgId + "!"));
             if (sessionCookie) {
               sendResponse(sessionCookie.domain);
