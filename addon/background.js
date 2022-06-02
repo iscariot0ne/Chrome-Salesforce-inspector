@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         return;
       }
       let [orgId] = cookie.value.split("!");
-      chrome.cookies.getAll({name: "sid", domain: "salesforce.com", secure: true, storeId: sender.tab.cookieStoreId}, cookies => {
+      chrome.cookies.getAll({name: "sid", domain: "salesforce.mil", secure: true, storeId: sender.tab.cookieStoreId}, cookies => {
         let sessionCookie = cookies.find(c => c.value.startsWith(orgId + "!"));
         if (sessionCookie) {
           sendResponse(sessionCookie.domain);
