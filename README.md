@@ -8,9 +8,12 @@ Chrome and Firefox extension to add a metadata layout on top of the standard Sal
 
 Installation
 ------------
-
-| [:sunny: Add to Chrome](https://chrome.google.com/webstore/detail/salesforce-inspector/aodjmnfhjibkcdimpodiifdjnnncaafh) | [:sunny: Add to Firefox](https://addons.mozilla.org/firefox/addon/salesforce-inspector/) |
-| --- | --- |
+### Chrome
+1. Open `chrome://extensions/`.
+2. Enable `Developer mode`.
+3. Click `code` in the repository and `download` the zip file and unzip'.
+4. Click `Load unpacked extension...`.
+5. Select the `addon` subdirectory of the file you downloaded of the repository.
 
 Features
 -----
