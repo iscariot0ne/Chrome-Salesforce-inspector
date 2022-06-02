@@ -1,0 +1,60 @@
+{
+  "name": "Salesforce inspector",
+  "description": "Productivity tools for Salesforce administrators and developers to inspect data and metadata directly from the Salesforce UI.",
+  "version": "1.13.1",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "jid1-DBcuAQpfLMcvOQ@jetpack",
+      "strict_min_version": "60.0"
+    }
+  },
+  "minimum_chrome_version": "61",
+  "permissions": [
+    "https://*.salesforce.com/*",
+    "https://*.salesforce.mil/*",
+    "https://*.force.com/*",
+    "https://*.crmforce.mil/*",
+    "https://*.visualforce.com/*",
+    "cookies"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.salesforce.com/*",
+        "https://*.salesforce.mil/*",
+        "https://*.visual.force.com/*",
+        "https://*.lightning.force.com/*",
+        "https://*.crmforce.mil/*",
+        "https://*.visualforce.com/*"
+      ],
+      "all_frames": true,
+      "css": [
+        "button.css",
+        "inspect-inline.css"
+      ],
+      "js": [
+        "button.js",
+        "inspect-inline.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "popup.html",
+    "data-export.html",
+    "data-import.html",
+    "inspect.html",
+    "metadata-retrieve.html",
+    "explore-api.html",
+    "limits.html"
+  ],
+  "incognito": "not_allowed",
+  "manifest_version": 2
+}
